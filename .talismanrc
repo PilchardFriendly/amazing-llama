@@ -1,0 +1,7 @@
+fileignoreconfig:
+- filename: stack.yaml.lock
+  checksum: ebf84cb22f7a656f87c67eda28c174dd7a3c28fd87a720cf4a92999b29afdcae
+- filename: amazing-llama.cabal
+  checksum: 3e5a756516e1f7fe7d4f6f1478207878332ff63f7988f601852f184d59caaffb
+- filename: stack.yaml
+  checksum: cf876f5e730a3546551aa8a093e85b2f390af5bd21eefd4d504298b68ebdaf3e
