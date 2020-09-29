@@ -7,16 +7,16 @@ import Lib
 import Test.Hspec
 import Data.Functor.Identity (Identity(..))
 
-a :: DAB m Int
+a :: Depend m e Int
 a = fact 10
-b :: DAB m Int
+b :: Depend m e Int
 b = fact 15
-c :: DAB m (Maybe Int)
+c :: Depend m e (Maybe Int)
 c = fact $ Just 5
 
 
-exampleDependency :: DAB m Int
-exampleDependency = validate (lessThan b) $ when isJust c a
+exampleDependency :: Depend m (->) Int
+exampleDependency = validate (lessThan b) $ given isJust c a
     where
         lessThan x = lift (>) x
         isJust = fact (maybe False $ const True)
